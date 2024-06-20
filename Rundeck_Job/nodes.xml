@@ -1,0 +1,12 @@
+<project>
+  <node name="docker-vm-01" hostname="docker-vm-01" description="Docker VM 01" osFamily="unix" username="your-username"/>
+  <node name="docker-vm-02" hostname="docker-vm-02" description="Docker VM 02" osFamily="unix" username="your-username"/>
+  <node name="docker-vm-03" hostname="docker-vm-03" description="Docker VM 03" osFamily="unix" username="your-username"/>
+  <node name="docker-vm-04" hostname="docker-vm-04" description="Docker VM 04" osFamily="unix" username="your-username"/>
+  <node name="docker-vm-05" hostname="docker-vm-05" description="Docker VM 05" osFamily="unix" username="your-username"/>
+  <node name="docker-vm-06" hostname="docker-vm-06" description="Docker VM 06" osFamily="unix" username="your-username"/>
+  <node name="docker-vm-07" hostname="docker-vm-07" description="Docker VM 07" osFamily="unix" username="your-username"/>
+  <node name="docker-vm-08" hostname="docker-vm-08" description="Docker VM 08" osFamily="unix" username="your-username"/>
+  <node name="docker-vm-09" hostname="docker-vm-09" description="Docker VM 09" osFamily="unix" username="your-username"/>
+  <node name="docker-vm-10" hostname="docker-vm-10" description="Docker VM 10" osFamily="unix" username="your-username"/>
+</project>
