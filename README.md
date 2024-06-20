@@ -13,6 +13,8 @@ O objetivo deste desafio é avaliar suas habilidades em Rundeck e Ansible. Você
    
 * Certifique-se de que as máquinas provisionadas estejam acessíveis para o Ansible executar o playbook.
 
+### Bonus se entregar também os códigos Terraform para provisionamento das 10 maquinas na AWS.
+
 ## Critérios de Avaliação
 Seu trabalho será avaliado com base nos seguintes critérios:
 - **Funcionalidade**: O playbook Ansible deve executar todas as tarefas especificadas no job Rundeck original.
