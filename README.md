@@ -1,5 +1,5 @@
 ## Objetivo
-O objetivo deste desafio é avaliar suas habilidades em Rundeck, Ansible e Terraform. Você precisará converter um job complexo do Rundeck, que interage com diversas máquinas Linux para instalar e configurar Docker, em um playbook Ansible. Além disso, será necessário provisionar a infraestrutura necessária utilizando Terraform.
+O objetivo deste desafio é avaliar suas habilidades em Rundeck e Ansible. Você precisará converter um job complexo do Rundeck, que interage com diversas máquinas Linux para instalar e configurar Docker, em um playbook Ansible. 
 
 ## Instruções
 
@@ -17,7 +17,7 @@ O objetivo deste desafio é avaliar suas habilidades em Rundeck, Ansible e Terra
 Seu trabalho será avaliado com base nos seguintes critérios:
 - **Funcionalidade**: O playbook Ansible deve executar todas as tarefas especificadas no job Rundeck original.
 - **Organização e Clareza**: O código deve ser bem organizado e fácil de entender.
-- **Uso de Boas Práticas**: Devem ser seguidas as melhores práticas para Ansible e Terraform.
+- **Uso de Boas Práticas**: Devem ser seguidas as melhores práticas para Ansible. 
 - **Documentação**: Forneça uma documentação clara no README.md explicando como executar o playbook e provisionar a infraestrutura.
 
 ## Submissão
