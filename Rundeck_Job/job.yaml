@@ -1,0 +1,37 @@
+- defaultTab: nodes
+  description: "Instala, configura e inicia Docker em 10 máquinas"
+  executionEnabled: true
+  id: 1234-5678-91011-121314
+  loglevel: INFO
+  name: "Instalar e Configurar Docker"
+  nodeFilterEditable: false
+  scheduleEnabled: true
+  sequence:
+    commands:
+      - description: "Instala Docker"
+        exec: |
+          sudo yum update -y
+          sudo yum install -y yum-utils
+          sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+          sudo yum install -y docker-ce docker-ce-cli containerd.io
+      - description: "Adiciona usuário ao grupo docker"
+        exec: |
+          sudo usermod -aG docker $USER
+      - description: "Habilita e inicia o serviço Docker"
+        exec: |
+          sudo systemctl enable docker
+          sudo systemctl start docker
+    keepgoing: false
+    strategy: node-first
+  nodefilters:
+    dispatch:
+      keepgoing: false
+      threadcount: 1
+    filter: "name: docker-vm-01 OR name: docker-vm-02 OR name: docker-vm-03 OR name: docker-vm-04 OR name: docker-vm-05 OR name: docker-vm-06 OR name: docker-vm-07 OR name: docker-vm-08 OR name: docker-vm-09 OR name: docker-vm-10"
+  nodesSelectedByDefault: true
+  schedule:
+    time:
+      hour: 14
+      minute: 0
+      seconds: 0
+  uuid: 1234-5678-91011-121314
