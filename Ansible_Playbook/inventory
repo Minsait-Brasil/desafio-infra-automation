@@ -1,0 +1,14 @@
+[docker_vms]
+docker-vm-01 ansible_host=192.168.1.1
+docker-vm-02 ansible_host=192.168.1.2
+docker-vm-03 ansible_host=192.168.1.3
+docker-vm-04 ansible_host=192.168.1.4
+docker-vm-05 ansible_host=192.168.1.5
+docker-vm-06 ansible_host=192.168.1.6
+docker-vm-07 ansible_host=192.168.1.7
+docker-vm-08 ansible_host=192.168.1.8
+docker-vm-09 ansible_host=192.168.1.9
+docker-vm-10 ansible_host=192.168.1.10
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
