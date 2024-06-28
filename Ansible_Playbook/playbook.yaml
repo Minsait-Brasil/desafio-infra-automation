@@ -1,0 +1,41 @@
+---
+- name: Instalar e configurar Docker em várias máquinas Linux
+  hosts: all
+  become: yes
+  tasks:
+    - name: Atualizar índice de pacotes yum
+      yum:
+        name: "*"
+        state: latest
+      when: ansible_os_family == "RedHat"
+
+    - name: Instalar pacotes necessários
+      yum:
+        name: yum-utils
+        state: present
+      when: ansible_os_family == "RedHat"
+
+    - name: Adicionar repositório Docker
+      command: yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+      when: ansible_os_family == "RedHat"
+
+    - name: Instalar pacotes Docker
+      yum:
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+        state: present
+      when: ansible_os_family == "RedHat"
+
+    - name: Adicionar usuário ao grupo docker
+      user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: yes
+
+    - name: Habilitar e iniciar serviço Docker
+      systemd:
+        name: docker
+        enabled: yes
+        state: started
