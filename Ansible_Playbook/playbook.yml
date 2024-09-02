@@ -1,0 +1,43 @@
+YAML
+---
+- name: Instalar e Configurar Docker 
+  hosts: docker-vm-01 | docker-vm-02 | docker-vm-03 | docker-vm-04 | docker-vm-05 | docker-vm-06 | docker-vm-07 | docker-vm-08 | docker-vm-09 | docker-vm-10
+  become: true
+  tasks:
+    - name: Update package lists (CentOS)
+      yum:
+        name: "*"
+        state: update
+
+    - name: Install Docker pre-requisites (CentOS)
+      yum:
+        name:
+          - yum-utils
+        state: present
+
+    - name: Add Docker repository (CentOS)
+      yum_config_manager:
+        name: docker-ce.repo
+        state: present
+        repo_url: https://download.docker.com/linux/centos/docker-ce.repo
+
+    - name: Install Docker engine, client, and containerd (CentOS)
+      yum:
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+        state: present
+
+    - name: Add user to docker group
+      usermod:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: yes
+
+    - name: Enable and start Docker service
+      service:
+        name: docker
+        state: started
+        enabled: yes
+

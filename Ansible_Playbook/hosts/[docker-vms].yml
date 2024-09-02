@@ -1,0 +1,11 @@
+[docker-vms]
+docker-vm-01 ansible_host=192.168.1.101
+docker-vm-02 ansible_host=192.168.1.102
+docker-vm-03 ansible_host=192.168.1.103
+docker-vm-04 ansible_host=192.168.1.104
+docker-vm-05 ansible_host=192.168.1.105
+docker-vm-06 ansible_host=192.168.1.106
+docker-vm-07 ansible_host=192.168.1.107
+docker-vm-08 ansible_host=192.168.1.108
+docker-vm-09 ansible_host=192.168.1.109
+docker-vm-10 ansible_host=192.168.1.110
